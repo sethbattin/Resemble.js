@@ -83,7 +83,7 @@ URL: https://github.com/Huddle/Resemble.js
 	var document = typeof window != "undefined" ? window.document : {
 		createElement: function() {
 			// This will work as long as only createElement is used on window.document
-			var Canvas = require('jsdom').Canvas;
+			var Canvas = require('canvas');
 			return new Canvas();
 		}
 	};
@@ -180,7 +180,7 @@ URL: https://github.com/Huddle/Resemble.js
 			if (typeof Image !== 'undefined') {
 				hiddenImage = new Image();
 			} else {
-				var CanvasImage = require('canvas-prebuilt').Image;
+				var CanvasImage = require('canvas').Image;
 				hiddenImage = new CanvasImage();
 				hiddenImage.setAttribute = function setAttribute() { };
 			}
