@@ -83,7 +83,7 @@ URL: https://github.com/Huddle/Resemble.js
 	var document = typeof window != "undefined" ? window.document : {
 		createElement: function() {
 			// This will work as long as only createElement is used on window.document
-			var Canvas = require('canvas-prebuilt');
+			var Canvas = require('jsdom').Canvas;
 			return new Canvas();
 		}
 	};
